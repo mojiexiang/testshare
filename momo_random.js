@@ -23,6 +23,7 @@
          await getthisIP();
 	 // 生成0到1800的随机整数（随机30分钟内执行）
 	 let randomNumber = Math.floor(Math.random() * 1801);
+	 console.log(randomNumber + '秒后执行')
          await $.wait(2+randomNumber * 1000);
              UA = require('./USER_AGENTS').USER_AGENT;
              await $.wait(2 * 1000);
