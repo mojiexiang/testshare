@@ -21,7 +21,9 @@
                  8 * 60 * 60 * 1000
              ).toLocaleString()} =========================================\n`);
          await getthisIP();
-         await $.wait(2 * 1000);
+	 // 生成0到1800的随机整数（随机30分钟内执行）
+	 let randomNumber = Math.floor(Math.random() * 1801);
+         await $.wait(2+randomNumber * 1000);
              UA = require('./USER_AGENTS').USER_AGENT;
              await $.wait(2 * 1000);
              if (debug) {
